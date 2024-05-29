@@ -78,3 +78,7 @@ crashlytics-build.properties
 .DS_Store
 Assets/VisualsAssets/360
 buildWindows/
+
+Library/
+Logs/
+Packages/
