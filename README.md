@@ -23,8 +23,11 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 ## Todo
 
-- Bloquer la rotation de l'écran
-- Ajouter Dotween au projet
-- Ajouter des animations à la barre de navigation (items actife/inactif, animation de masquage...)
-- Créer le prefab d'une affiche de jeu pour la collection
+<!-- - Bloquer la rotation de l'écran -->
+<!-- - Ajouter Dotween au projet -->
+<!-- - Ajouter des animations à la barre de navigation (items actife/inactif, animation de masquage...) -->
+<!-- - Créer le prefab d'une affiche de jeu pour la collection -->
+- Créer le préfab d'une fiche de jeu pour les détails
+- Créer les boutons de tri de la collection
+- Ajouter des éléments dans la zone d'en-tête de la collection (Titre, Nombre d'éléments...)
 - Connecter l'API IGDB et afficher des jeux au hasard dans la collection pour tester l'API
