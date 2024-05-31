@@ -4,6 +4,8 @@ using UnityEngine;
 public class Navbar : MonoBehaviour
 {
     [SerializeField] private List<NavItem> navItems = new();
+    public Color selectedColor;
+    public Color unselectedColor;
 
     private void Start()
     {

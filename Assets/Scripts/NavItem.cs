@@ -9,8 +9,6 @@ public class NavItem : MonoBehaviour
     [SerializeField] private Image icon;
     [SerializeField] private GameObject iconBackground;
     private bool isSelected = false;
-    [SerializeField] private Color selectedColor;
-    [SerializeField] private Color unselectedColor;
     private float iconBackgroundWidth;
     private Navbar navbar;
 
@@ -26,8 +24,8 @@ public class NavItem : MonoBehaviour
         isSelected = true;
         iconBackground.SetActive(true);
         AnimateIconBackground();
-        title.color = selectedColor;
-        icon.color = selectedColor;
+        title.color = navbar.selectedColor;
+        icon.color = navbar.selectedColor;
         title.fontStyle = FontStyles.Bold;
     }
 
@@ -35,8 +33,8 @@ public class NavItem : MonoBehaviour
     {
         isSelected = false;
         iconBackground.SetActive(false);
-        title.color = unselectedColor;
-        icon.color = unselectedColor;
+        title.color = navbar.unselectedColor;
+        icon.color = navbar.unselectedColor;
         title.fontStyle = FontStyles.Normal;
     }
 

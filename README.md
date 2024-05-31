@@ -20,6 +20,7 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - [ ] Voir les prochaines sorties par ordre chronologique
 - [ ] Avoir les données d'HowLongToBeat pour chaque jeu
 - [ ] Avoir les données de CrackWatch pour chaque jeu (+ notifications)
+- [ ] Connaitre la date d'ajout d'un élément à la bibliothèque
 
 ## Todo
 
@@ -28,6 +29,8 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!-- - Ajouter des animations à la barre de navigation (items actife/inactif, animation de masquage...) -->
 <!-- - Créer le prefab d'une affiche de jeu pour la collection -->
 - Créer le préfab d'une fiche de jeu pour les détails
-- Créer les boutons de tri de la collection
-- Ajouter des éléments dans la zone d'en-tête de la collection (Titre, Nombre d'éléments...)
+<!-- - Créer les boutons de tri de la collection -->
+<!-- - Ajouter des éléments dans la zone d'en-tête de la collection (Titre, Nombre d'éléments...) -->
+- Ajouter gestion des clics sur les filtres de la collection
+- Ajouter un scrollrect sur la grille de la collection
 - Connecter l'API IGDB et afficher des jeux au hasard dans la collection pour tester l'API
