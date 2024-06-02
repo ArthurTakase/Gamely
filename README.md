@@ -37,7 +37,7 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - Ajouter un menu Settings
 - Ajouter une option pour changer la couleur d'accentuation de l'application
 - Ajouter une option pour changer la langue de l'application
-- Afficher la status bar Android
-- Afficher la barre de navigation Android
+<!-- - Afficher la status bar Android -->
+<!-- - Afficher la barre de navigation Android -->
 - Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
-- 120hz
+<!-- - 120hz -->
