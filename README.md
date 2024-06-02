@@ -31,6 +31,13 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - Créer le préfab d'une fiche de jeu pour les détails
 <!-- - Créer les boutons de tri de la collection -->
 <!-- - Ajouter des éléments dans la zone d'en-tête de la collection (Titre, Nombre d'éléments...) -->
-- Ajouter gestion des clics sur les filtres de la collection
-- Ajouter un scrollrect sur la grille de la collection
+<!-- - Ajouter gestion des clics sur les filtres de la collection -->
+<!-- - Ajouter un scrollrect sur la grille de la collection -->
 - Connecter l'API IGDB et afficher des jeux au hasard dans la collection pour tester l'API
+- Ajouter un menu Settings
+- Ajouter une option pour changer la couleur d'accentuation de l'application
+- Ajouter une option pour changer la langue de l'application
+- Afficher la status bar Android
+- Afficher la barre de navigation Android
+- Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
+- 120hz

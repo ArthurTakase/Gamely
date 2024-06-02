@@ -245,7 +245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Celeste - La vangeance des seigneurs masqu\xE9s"
+  m_text: Celeste
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26ceb9431a03244e7945482af158e59e, type: 2}
   m_sharedMaterial: {fileID: -8252180585157320100, guid: 26ceb9431a03244e7945482af158e59e, type: 2}
