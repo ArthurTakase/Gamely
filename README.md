@@ -20,7 +20,10 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - [ ] Possibilité d'exporter sa bibliothèque (et de l'importer)
 - [ ] Voir les prochaines sorties par ordre chronologique
 - [ ] Avoir les données d'HowLongToBeat pour chaque jeu
+    - GET https://howlongtobeat.com/?q={nom du jeu} + Scrapping
 - [ ] Avoir les données de CrackWatch pour chaque jeu (+ notifications)
+    - GET https://omycrack.com/searchscripts?q={nom du jeu} + Scrapping
+    - POST https://gamestatus.info/back/api/gameinfo/game/search_title/ + body -> {"title":"{nom du jeu}"}
 - [ ] Connaitre la date d'ajout d'un élément à la bibliothèque
 
 ## Todo
@@ -49,7 +52,7 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 ### Next version
 
 - Rendre les boutons des filtres plus gros
-- Ajouter un menu Settings
+<!-- - Ajouter un menu Settings -->
 - Ajouter un lien vers le github dans le menu Settings
 - Ajouter le numéro de version de l'application dans le menu Settings
 - Créer le préfab d'une fiche de jeu pour les détails
