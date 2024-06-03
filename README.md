@@ -40,6 +40,11 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!-- - Afficher la status bar Android -->
 <!-- - Afficher la barre de navigation Android -->
 <!-- - 120hz -->
+<!-- - Ajouter un menu Settings -->
+<!-- - Pouvoir changer de page avec la navbar. -->
+<!-- - Ajouter un lien vers le github dans le menu Settings -->
+<!-- - Ajouter le numéro de version de l'application dans le menu Settings -->
+<!-- - Rendre les boutons des filtres plus gros -->
 
 ### Backlog
 
@@ -48,14 +53,10 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - Ajouter une option pour changer la langue de l'application
 - Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
 - Supprimer le splashscreen Unity ([lien](https://github.com/kiraio-moe/USSR))
+- Ajouter un fondu dans les changements des pages principales
 
 ### Next version
 
-- Rendre les boutons des filtres plus gros
-<!-- - Ajouter un menu Settings -->
-- Ajouter un lien vers le github dans le menu Settings
-- Ajouter le numéro de version de l'application dans le menu Settings
 - Créer le préfab d'une fiche de jeu pour les détails
 - Créer le visuel de la page Calendrier
 - Créer le visuel de la page Recherche
-- Pouvoir changer de page avec la navbar.

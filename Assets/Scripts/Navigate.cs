@@ -5,9 +5,13 @@ public class Navigate : MonoBehaviour
 {
     public GameObject settingsPanel;
     public GameObject navbar;
+    public GameObject defaultPage;
+
+    private GameObject currentPage;
 
     void Start()
     {
+        currentPage = defaultPage;
         CloseSettings();
     }
 
@@ -41,5 +45,17 @@ public class Navigate : MonoBehaviour
         navbar.transform
             .DOLocalMoveY(-height, 0.3f)
             .SetEase(Ease.InQuad);
+    }
+
+    public void ShowPage(GameObject page)
+    {
+        currentPage.SetActive(false);
+        currentPage = page;
+        currentPage.SetActive(true);
+    }
+
+    public void OpenURL(string url)
+    {
+        Application.OpenURL(url);
     }
 }

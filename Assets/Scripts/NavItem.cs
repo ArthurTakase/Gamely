@@ -26,7 +26,6 @@ public class NavItem : MonoBehaviour
         AnimateIconBackground();
         title.color = navbar.selectedColor;
         icon.color = navbar.selectedColor;
-        title.fontStyle = FontStyles.Bold;
     }
 
     public void Deactivate()
@@ -35,7 +34,6 @@ public class NavItem : MonoBehaviour
         iconBackground.SetActive(false);
         title.color = navbar.unselectedColor;
         icon.color = navbar.unselectedColor;
-        title.fontStyle = FontStyles.Normal;
     }
 
     public void Toggle()
