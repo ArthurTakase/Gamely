@@ -20,10 +20,10 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - [ ] Possibilité d'exporter sa bibliothèque (et de l'importer)
 - [ ] Voir les prochaines sorties par ordre chronologique
 - [ ] Avoir les données d'HowLongToBeat pour chaque jeu
-    - GET https://howlongtobeat.com/?q={nom du jeu} + Scrapping
+  - GET `https://howlongtobeat.com/?q={nom du jeu}` + Scrapping
 - [ ] Avoir les données de CrackWatch pour chaque jeu (+ notifications)
-    - GET https://omycrack.com/searchscripts?q={nom du jeu} + Scrapping
-    - POST https://gamestatus.info/back/api/gameinfo/game/search_title/ + body -> {"title":"{nom du jeu}"}
+  - GET `https://omycrack.com/searchscripts?q={nom du jeu}` + Scrapping
+  - POST `https://gamestatus.info/back/api/gameinfo/game/search_title/` + body -> `{"title":"{nom du jeu}"}`
 - [ ] Connaitre la date d'ajout d'un élément à la bibliothèque
 
 ## Todo
@@ -45,31 +45,42 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!-- - Ajouter un lien vers le github dans le menu Settings -->
 <!-- - Ajouter le numéro de version de l'application dans le menu Settings -->
 <!-- - Rendre les boutons des filtres plus gros -->
+<!-- - Créer le préfab d'une fiche de jeu pour les détails -->
+<!--    - Poster -->
+<!--    - Date de sortie -->
+<!--    - Description -->
+<!--    - Studio -->
+<!--    - Plateformes -->
+<!--    - Genres -->
+<!--    - Screenshot -->
+<!--    - How long to beat -->
+<!--    - Crackwatch -->
+<!--    - Note Metacritic -->
+<!--    - Recommendations -->
+<!-- - Réduire la bordure sur la page des jeux -->
+<!-- - Créer le visuel des pop up de bas de page -->
 
 ### Backlog
 
-- Connecter l'API IGDB et afficher des jeux au hasard dans la collection pour tester l'API
 - Ajouter une option pour changer la couleur d'accentuation de l'application
 - Ajouter une option pour changer la langue de l'application
+- Ajouter le nom des api utilisés dans les paramètres
 - Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
 - Supprimer le splashscreen Unity ([lien](https://github.com/kiraio-moe/USSR))
 - Ajouter un fondu dans les changements des pages principales
 - pouvoir ouvrir une autre page de jeu depuis la page d'un jeu
+- Créer le visuel de la page Calendrier
+- Faire le visuel de la PopUp pour noter un jeu
+- Faire le visuel de la PopUp pour ajouter un jeu à la collection
+- Faire scroll la page des jeux en haut quand on change de jeu
+- Ajouter une icone sur le poster d'un jeu pour indiquer si le jeu est dans la collection
+- Voir pour refaire les pages avec UI Toolkit
+- Refaire l'animation des PopUp
+- Grossir les filtres de la collection
 
 ### Next version
 
-<!-- - Créer le préfab d'une fiche de jeu pour les détails -->
-<!-- - Poster -->
-<!-- - Date de sortie -->
-<!-- - Description -->
-<!-- - Studio -->
-<!-- - Plateformes -->
-<!-- - Genres -->
-<!-- - Screenshot -->
-<!-- - How long to beat -->
-<!-- - Crackwatch -->
-<!-- - Note Metacritic -->
-<!-- - Recommendations -->
-- Réduire la bordure sur la page des jeux
-- Créer le visuel de la page Calendrier
 - Créer le visuel de la page Recherche
+- Mettre en place une base de données pour stocker les jeux
+- Connecter l'API IGDB ou RAWG
+- Permettre de rechercher des jeux

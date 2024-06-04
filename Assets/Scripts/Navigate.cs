@@ -87,4 +87,21 @@ public class Navigate : MonoBehaviour
     {
         Application.OpenURL(url);
     }
+
+    public void OpenPopUp(GameObject popup)
+    {
+        popup.SetActive(true);
+        popup.transform
+            .DOLocalMoveY(0, 0.3f)
+            .SetEase(Ease.OutQuad);
+    }
+
+    public void ClosePopUp(GameObject popup)
+    {
+        float height = popup.transform.GetComponent<RectTransform>().rect.height;
+        popup.transform
+            .DOLocalMoveY(-height, 0.3f)
+            .SetEase(Ease.InQuad)
+            .OnComplete(() => popup.SetActive(false));
+    }
 }
