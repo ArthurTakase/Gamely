@@ -54,9 +54,22 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
 - Supprimer le splashscreen Unity ([lien](https://github.com/kiraio-moe/USSR))
 - Ajouter un fondu dans les changements des pages principales
+- pouvoir ouvrir une autre page de jeu depuis la page d'un jeu
 
 ### Next version
 
-- Créer le préfab d'une fiche de jeu pour les détails
+<!-- - Créer le préfab d'une fiche de jeu pour les détails -->
+<!-- - Poster -->
+<!-- - Date de sortie -->
+<!-- - Description -->
+<!-- - Studio -->
+<!-- - Plateformes -->
+<!-- - Genres -->
+<!-- - Screenshot -->
+<!-- - How long to beat -->
+<!-- - Crackwatch -->
+<!-- - Note Metacritic -->
+<!-- - Recommendations -->
+- Réduire la bordure sur la page des jeux
 - Créer le visuel de la page Calendrier
 - Créer le visuel de la page Recherche
