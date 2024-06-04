@@ -13,8 +13,18 @@ public class Navigate : MonoBehaviour
     void Start()
     {
         currentPage = defaultPage;
-        CloseSettings();
-        CloseGamePage();
+
+        // move settings panel to the right
+        float width = settingsPanel.transform.GetComponent<RectTransform>().rect.width;
+        settingsPanel.transform.localPosition = new Vector3(width, 0, 0);
+        settingsPanel.SetActive(false);
+
+        // move game page to the right
+        width = gamePage.transform.GetComponent<RectTransform>().rect.width;
+        gamePage.transform.localPosition = new Vector3(width, 0, 0);
+        gamePage.SetActive(false);
+
+        ShowNavbar();
     }
 
     public void OpenSettings()
@@ -36,7 +46,6 @@ public class Navigate : MonoBehaviour
 
     public void OpenGamePage()
     {
-        float width = gamePage.transform.GetComponent<RectTransform>().rect.width;
         gamePage.SetActive(true);
         gamePage.transform
             .DOLocalMoveX(0, 0.3f)
