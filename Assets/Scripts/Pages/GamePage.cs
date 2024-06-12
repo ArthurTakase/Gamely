@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class GamePage : MonoBehaviour
 {
-    public Navigate navigate;
+    private Navigate navigate;
+
+    public void Start()
+    {
+        navigate = FindObjectOfType<Navigate>();
+    }
 
     public void Update()
     {

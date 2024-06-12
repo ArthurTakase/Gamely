@@ -59,6 +59,8 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!--    - Recommendations -->
 <!-- - Réduire la bordure sur la page des jeux -->
 <!-- - Créer le visuel des pop up de bas de page -->
+<!-- - Connecter l'API IGDB ou RAWG -->
+<!-- - Permettre de rechercher des jeux -->
 
 ### Backlog
 
@@ -83,6 +85,4 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 - Créer le visuel de la page Recherche
 - Mettre en place une base de données pour stocker les jeux
-<!-- - Connecter l'API IGDB ou RAWG -->
-<!-- - Permettre de rechercher des jeux -->
 - Générer les pages des détails des jeux au clic
