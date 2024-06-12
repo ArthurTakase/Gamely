@@ -64,6 +64,7 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 - Ajouter une option pour changer la couleur d'accentuation de l'application
 - Ajouter une option pour changer la langue de l'application
+- Ajouter une option pour rensiegner sa clé API RAWG
 - Ajouter le nom des api utilisés dans les paramètres
 - Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
 - Supprimer le splashscreen Unity ([lien](https://github.com/kiraio-moe/USSR))
@@ -82,5 +83,6 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 - Créer le visuel de la page Recherche
 - Mettre en place une base de données pour stocker les jeux
-- Connecter l'API IGDB ou RAWG
-- Permettre de rechercher des jeux
+<!-- - Connecter l'API IGDB ou RAWG -->
+<!-- - Permettre de rechercher des jeux -->
+- Générer les pages des détails des jeux au clic
