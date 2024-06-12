@@ -59,14 +59,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e21743a5f28440efa01c14cbcd94899, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Celeste
+  m_text: No Data
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26ceb9431a03244e7945482af158e59e, type: 2}
   m_sharedMaterial: {fileID: -8252180585157320100, guid: 26ceb9431a03244e7945482af158e59e, type: 2}
@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 8698081722181077630}
   - component: {fileID: 7033979945789965318}
   - component: {fileID: 1133037234926895096}
+  - component: {fileID: 5756057593787339876}
   m_Layer: 5
   m_Name: GamePoster
   m_TagString: Untagged
@@ -452,3 +453,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7464053694464041362}
   m_CullTransparentMesh: 1
+--- !u!114 &5756057593787339876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7464053694464041362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a785001645374edb89c88cb9cc94be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 7861329649903726492}
+  title: {fileID: 7166772558950666971}
+  id: 

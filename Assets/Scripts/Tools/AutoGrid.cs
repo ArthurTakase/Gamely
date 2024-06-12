@@ -15,19 +15,9 @@ public class AutoGrid : MonoBehaviour
         defaultCellWidth = gridLayoutGroup.cellSize.x;
         defaultCellHeight = gridLayoutGroup.cellSize.y;
         UpdateCellSize();
-
-        StartCoroutine(RAWGHandler.GetGamesFromName("Baldur's Gate 3", (json) =>
-        {
-            Debug.Log(json);
-            SearchResult searchResult = JsonUtility.FromJson<SearchResult>(json);
-            foreach (Game game in searchResult.results)
-            {
-                Debug.Log(game.name);
-            }
-        }));
     }
 
-    void UpdateCellSize()
+    public void UpdateCellSize()
     {
         float width = (gridLayoutGroup.transform as RectTransform).rect.width - gridLayoutGroup.padding.left - gridLayoutGroup.padding.right - gridLayoutGroup.spacing.x * (nbColumns - 1);
         float cellWidth = width / nbColumns;

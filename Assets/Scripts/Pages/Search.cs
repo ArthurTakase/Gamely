@@ -1,23 +1,39 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class Search : MonoBehaviour
 {
-    public TextMeshProUGUI searchResultText;
+    public Transform searchResultsParent;
+    private PageSpawner pageSpawner;
+    private readonly List<GameObject> searchResults = new();
+
+    private void Start()
+    {
+        pageSpawner = GetComponent<PageSpawner>();
+    }
 
     public void SearchGame(string gameName)
     {
-        Debug.Log("Searching for " + gameName);
-        searchResultText.text = "";
+        if (string.IsNullOrEmpty(gameName)) return;
 
-        if (string.IsNullOrEmpty(gameName))
-            return;
+        foreach (GameObject result in searchResults) Destroy(result);
+        searchResults.Clear();
 
-        StartCoroutine(RAWGHandler.GetGamesFromName(gameName, (json) =>
+        StartCoroutine(IGDBHandler.GetGamesFromName(gameName, (json) =>
         {
-            SearchResult searchResult = JsonUtility.FromJson<SearchResult>(json);
-            foreach (Game game in searchResult.results)
-                searchResultText.text += game.name + "\n";
+            json = "{\"games\":" + json + "}";
+            Debug.Log(json);
+            IGDB_Games games = JsonUtility.FromJson<IGDB_Games>(json);
+            foreach (IGDB_Game game in games.games)
+            {
+                Debug.Log(game.name);
+                GameObject poster = pageSpawner.SpawnGamePosters(game, searchResultsParent);
+                searchResults.Add(poster);
+            }
+
+            AutoGrid grid = searchResultsParent.GetComponent<AutoGrid>();
+            grid.UpdateCellSize();
         }));
     }
 }
