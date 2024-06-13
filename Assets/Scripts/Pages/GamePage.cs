@@ -68,29 +68,6 @@ public class GamePage : MonoBehaviour
         }
     }
 
-    // private IEnumerator CrackWatch(System.Action<string> callback)
-    // {
-    //     // post request on https://gamestatus.info/back/api/gameinfo/game/search_title/ with body {"title":"game.name"}
-    //     string url = "https://gamestatus.info/back/api/gameinfo/game/search_title/";
-    //     string jsonBody = $"{{\"title\":\"{game.name}\"}}";
-    //     byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-
-    //     UnityWebRequest request = new(url, "POST") { uploadHandler = new UploadHandlerRaw(bodyRaw) };
-    //     request.SetRequestHeader("Content-Type", "application/json");
-    //     request.downloadHandler = new DownloadHandlerBuffer();
-
-    //     yield return request.SendWebRequest();
-
-    //     if (request.result == UnityWebRequest.Result.ConnectionError)
-    //     {
-    //         Debug.Log(request.error);
-    //     }
-    //     else
-    //     {
-    //         callback(request.downloadHandler.text);
-    //     }
-    // }
-
     public void SetGame(IGDB_Game game)
     {
         this.game = game;
@@ -119,8 +96,16 @@ public class GamePage : MonoBehaviour
                 return;
             }
 
-            Debug.Log(game.Serialize());
             crackwatchText.text = game.Serialize();
+        }));
+
+        StartCoroutine(HowLongToBeatHandler.GetAll(game.name, (json) =>
+        {
+            Debug.Log(json);
+        },
+        (error) =>
+        {
+            howlongtobeatText.text = error;
         }));
 
         StartCoroutine(DownloadPicture.Download(game.cover.GetURL(), (sprite) =>

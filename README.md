@@ -95,3 +95,4 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!-- - Générer les pages des détails des jeux au clic -->
 <!-- - Faire la requete CrackWatch -->
 - Faire la requete HowLongToBeat
+  - Si scrap trop complexe, faire un bouton pour arriver sur le site avec la recherche déjà faite

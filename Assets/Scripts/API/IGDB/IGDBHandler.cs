@@ -8,7 +8,6 @@ public class IGDBHandler : MonoBehaviour
     {
         IGDBData igdbData = GetIGDBData();
 
-        Debug.Log("Getting game info for " + gameName);
         string url = $"https://api.igdb.com/v4/games/?search={gameName}&fields=platforms.name,genres.name,aggregated_rating,artworks.image_id,cover.image_id,aggregated_rating_count,artworks,category,collection,collections,cover,first_release_date,franchise,franchises,genres,involved_companies,name,parent_game,platforms,rating,release_dates,screenshots,similar_games,slug,status,storyline,summary,tags,themes,updated_at,url;limit 50;";
 
         UnityWebRequest www = UnityWebRequest.Get(url);
@@ -18,11 +17,9 @@ public class IGDBHandler : MonoBehaviour
 
         yield return www.SendWebRequest();
 
-        Debug.Log("Response code: " + www.responseCode);
-
         if (www.result == UnityWebRequest.Result.ConnectionError)
         {
-            Debug.Log(www.error);
+            Debug.LogError(www.error);
         }
         else
         {

@@ -23,11 +23,9 @@ public class Search : MonoBehaviour
         StartCoroutine(IGDBHandler.GetGamesFromName(gameName, (json) =>
         {
             json = "{\"games\":" + json + "}";
-            Debug.Log(json);
             IGDB_Games games = JsonUtility.FromJson<IGDB_Games>(json);
             foreach (IGDB_Game game in games.games)
             {
-                Debug.Log(game.name);
                 GameObject poster = pageSpawner.SpawnGamePosters(game, searchResultsParent);
                 searchResults.Add(poster);
             }

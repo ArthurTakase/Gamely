@@ -56,7 +56,7 @@ public class IGDBManager : MonoBehaviour
 
         if (www.result == UnityWebRequest.Result.ConnectionError)
         {
-            Debug.Log(www.error);
+            Debug.LogError(www.error);
             yield break;
         }
 

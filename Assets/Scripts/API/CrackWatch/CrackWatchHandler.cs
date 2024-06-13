@@ -19,11 +19,10 @@ public class CrackWatchHandler : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            Debug.Log(request.error);
+            Debug.LogError(request.error);
         }
         else
         {
-            Debug.Log(request.downloadHandler.text);
             string json = "{\"games\":" + request.downloadHandler.text + "}";
             CrackWatch_Games allGames = JsonUtility.FromJson<CrackWatch_Games>(json);
             callback(allGames.games);
@@ -45,7 +44,7 @@ public class CrackWatchHandler : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            Debug.Log(request.error);
+            Debug.LogError(request.error);
         }
         else
         {
