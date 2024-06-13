@@ -92,7 +92,13 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 - Mettre la barre de recherche sur toutes les pages comme sur Showly
 - Transformer l'icone de la barre de navigation en bouton X pour vider la recherche quand le texte n'est pas vide
-<!-- - Générer les pages des détails des jeux au clic -->
-<!-- - Faire la requete CrackWatch -->
-- Faire la requete HowLongToBeat
-  - Si scrap trop complexe, faire un bouton pour arriver sur le site avec la recherche déjà faite
+- Générer les pages des détails des jeux au clic
+  <!-- - Données textuelles -->
+  <!-- - Données CrackWatch -->
+  - Données HowLongToBeat
+    - Si scrap trop complexe, faire un bouton pour arriver sur le site avec la recherche déjà faite
+  <!-- - Poster -->
+  - Screenshot
+  - Jeux recommandés
+  - Jeux de la même série
+  
