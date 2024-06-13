@@ -61,12 +61,13 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!-- - Créer le visuel des pop up de bas de page -->
 <!-- - Connecter l'API IGDB ou RAWG -->
 <!-- - Permettre de rechercher des jeux -->
+<!-- - Créer le visuel de la page Recherche -->
 
 ### Backlog
 
 - Ajouter une option pour changer la couleur d'accentuation de l'application
 - Ajouter une option pour changer la langue de l'application
-- Ajouter une option pour rensiegner sa clé API RAWG
+- Ajouter une option pour rensiegner ses infos API IGDB
 - Ajouter le nom des api utilisés dans les paramètres
 - Optimiser les scrollrects de la collection (désactiver les éléments non visibles) (+ BatchRendererGroup)
 - Supprimer le splashscreen Unity ([lien](https://github.com/kiraio-moe/USSR))
@@ -80,9 +81,17 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - Voir pour refaire les pages avec UI Toolkit
 - Refaire l'animation des PopUp
 - Grossir les filtres de la collection
+- Mettre des jeux du moment sur la page "recherche"
+- Ajouter des filtres à la recherche
+- Mettre en place une base de données pour stocker les jeux
+- Dimensioner correctement la backgroundPosterImage
+- Corriger les problèmes de taille des textes sur les pages de détails
+- Changer la couleur de la note en fonction de son niveau
 
 ### Next version
 
-- Créer le visuel de la page Recherche
-- Mettre en place une base de données pour stocker les jeux
-- Générer les pages des détails des jeux au clic
+- Mettre la barre de recherche sur toutes les pages comme sur Showly
+- Transformer l'icone de la barre de navigation en bouton X pour vider la recherche quand le texte n'est pas vide
+<!-- - Générer les pages des détails des jeux au clic -->
+<!-- - Faire la requete CrackWatch -->
+- Faire la requete HowLongToBeat
