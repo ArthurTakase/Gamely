@@ -8,7 +8,7 @@ public class IGDBHandler : MonoBehaviour
     {
         IGDBData igdbData = GetIGDBData();
 
-        string url = $"https://api.igdb.com/v4/games/?search={gameName}&fields=platforms.name,genres.name,aggregated_rating,artworks.image_id,cover.image_id,aggregated_rating_count,artworks,category,collection,collections,cover,first_release_date,franchise,franchises,genres,involved_companies,name,parent_game,platforms,rating,release_dates,screenshots,similar_games,slug,status,storyline,summary,tags,themes,updated_at,url;limit 50;";
+        string url = $"https://api.igdb.com/v4/games/?search={gameName}&fields=platforms.name,screenshots.image_id,genres.name,aggregated_rating,artworks.image_id,cover.image_id,aggregated_rating_count,artworks,category,collection,collections,cover,first_release_date,franchise,franchises,genres,involved_companies,name,parent_game,platforms,rating,release_dates,screenshots,similar_games,slug,status,storyline,summary,tags,themes,updated_at,url;limit 50;";
 
         UnityWebRequest www = UnityWebRequest.Get(url);
         www.SetRequestHeader("Accept", "application/json");

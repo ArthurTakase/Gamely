@@ -6,8 +6,8 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 ## Fonctionnalités attendues
 
-- [ ] Rechercher des jeux par titre grace à l'API IGDB
-- [ ] Afficher les détails d'un jeu
+- [x] Rechercher des jeux par titre grace à l'API IGDB
+- [x] Afficher les détails d'un jeu
 - [ ] Ajouter un jeu à sa bibliothèque (En cours, joué, voulu)
 - [ ] Ajouter des tags aux jeux (100%, terminé, abandonné, infini...)
 - [ ] Pouvoir noter des jeux (/10)
@@ -21,9 +21,10 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - [ ] Voir les prochaines sorties par ordre chronologique
 - [ ] Avoir les données d'HowLongToBeat pour chaque jeu
   - GET `https://howlongtobeat.com/?q={nom du jeu}` + Scrapping
-- [ ] Avoir les données de CrackWatch pour chaque jeu (+ notifications)
+- [x] Avoir les données de CrackWatch pour chaque jeu
   - GET `https://omycrack.com/searchscripts?q={nom du jeu}` + Scrapping
   - POST `https://gamestatus.info/back/api/gameinfo/game/search_title/` + body -> `{"title":"{nom du jeu}"}`
+- [ ] Avoir une notication quand un jeu de la bibliothèque est cracké
 - [ ] Connaitre la date d'ajout d'un élément à la bibliothèque
 
 ## Todo
@@ -62,6 +63,13 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 <!-- - Connecter l'API IGDB ou RAWG -->
 <!-- - Permettre de rechercher des jeux -->
 <!-- - Créer le visuel de la page Recherche -->
+<!--    - Données textuelles -->
+<!--    - Données CrackWatch -->
+<!--    - Supprimer les images par défaut de la page de détails -->
+<!--    - Changer la couleur de la note en fonction de son niveau -->
+<!--    - Corriger les problèmes de taille des textes sur les pages de détails -->
+<!--    - Poster -->
+<!--    - Screenshot -->
 
 ### Backlog
 
@@ -84,21 +92,16 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 - Mettre des jeux du moment sur la page "recherche"
 - Ajouter des filtres à la recherche
 - Mettre en place une base de données pour stocker les jeux
-- Dimensioner correctement la backgroundPosterImage
-- Corriger les problèmes de taille des textes sur les pages de détails
-- Changer la couleur de la note en fonction de son niveau
+- Améliorer la gestion de l'api CrackWatch
+- Données HowLongToBeat
+  - Si scrap trop complexe, faire un bouton pour arriver sur le site avec la recherche déjà faite
 
 ### Next version
 
 - Mettre la barre de recherche sur toutes les pages comme sur Showly
 - Transformer l'icone de la barre de navigation en bouton X pour vider la recherche quand le texte n'est pas vide
 - Générer les pages des détails des jeux au clic
-  <!-- - Données textuelles -->
-  <!-- - Données CrackWatch -->
-  - Données HowLongToBeat
-    - Si scrap trop complexe, faire un bouton pour arriver sur le site avec la recherche déjà faite
-  <!-- - Poster -->
-  - Screenshot
   - Jeux recommandés
   - Jeux de la même série
-  - Supprimer les images par défaut de la page de détails
+  - Jeux liés (extensions, remakes...)
+  - Dimensioner correctement la backgroundPosterImage (page détails)

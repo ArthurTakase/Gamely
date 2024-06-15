@@ -41,7 +41,7 @@ public class IGDB_Game
     public IGDB_Platform[] platforms;
     public float aggregated_rating;
     public float rating;
-    public int[] screenshots;
+    public IGDB_Image[] screenshots;
     public int[] similar_games;
     public string summary;
     public string url;
@@ -62,5 +62,11 @@ public class IGDB_Game
         // int rating = (int)aggregated_rating;
         if (aggregated_rating > 0) ((int)aggregated_rating).ToString();
         return ((int)rating).ToString();
+    }
+
+    public float GetRatingFloat()
+    {
+        if (aggregated_rating > 0) return aggregated_rating;
+        return rating;
     }
 }
