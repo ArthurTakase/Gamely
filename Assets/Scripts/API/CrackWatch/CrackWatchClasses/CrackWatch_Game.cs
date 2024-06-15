@@ -25,6 +25,6 @@ public class CrackWatch_Game
         string hacked_groups = this.hacked_groups.Replace("[", "").Replace("]", "").Replace("\"", "");
 
         if (hacked_groups == "") return readable_status;
-        return $"{readable_status} ({hacked_groups})";
+        return $"<b>{title}</b> {readable_status} ({hacked_groups})";
     }
 }

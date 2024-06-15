@@ -49,8 +49,11 @@ public class IGDB_Game
 
     public string GetReleaseDate()
     {
-        // Unix timestamp to DateTime
-        // Unix timestamp to "20 Janvier 2022"
+        return new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc).AddSeconds(first_release_date).ToString("yyyy-MM-dd");
+    }
+
+    public string GetReleaseDateFormatted()
+    {
         return new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc).AddSeconds(first_release_date).ToString("dd MMMM yyyy");
     }
 

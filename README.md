@@ -101,4 +101,4 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
   - Screenshot
   - Jeux recommandés
   - Jeux de la même série
-  
+  - Supprimer les images par défaut de la page de détails

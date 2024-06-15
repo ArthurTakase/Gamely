@@ -75,7 +75,7 @@ public class GamePage : MonoBehaviour
         titleText.text = game.name;
         navbarTitleText.text = game.name;
         scoreText.text = game.GetRating();
-        subtitleText.text = game.GetReleaseDate();
+        subtitleText.text = game.GetReleaseDateFormatted();
         descriptionText.text = game.summary.Length > maxDescription ? game.summary[..(System.Index)maxDescription] + "..." : game.summary;
         platformsText.text = "";
         genresText.text = "";
@@ -88,15 +88,16 @@ public class GamePage : MonoBehaviour
         foreach (IGDB_Genre genre in game.genres) genresText.text += genre.name + ", ";
         if (genresText.text.Length > 0) genresText.text = genresText.text[..^2];
 
-        StartCoroutine(CrackWatchHandler.GetGame(game.name, (game) =>
+        StartCoroutine(CrackWatchHandler.GetGame(game, (crackGame) =>
         {
-            if (game == null)
+            if (crackGame == null)
             {
-                crackwatchText.text = "Not found";
+                Debug.Log("Game not found on CrackWatch");
+                crackwatchText.text = "No crackwatch data found.";
                 return;
             }
 
-            crackwatchText.text = game.Serialize();
+            crackwatchText.text = crackGame.Serialize();
         }));
 
         StartCoroutine(HowLongToBeatHandler.GetAll(game.name, (json) =>
@@ -105,7 +106,7 @@ public class GamePage : MonoBehaviour
         },
         (error) =>
         {
-            howlongtobeatText.text = error;
+            howlongtobeatText.text = "No howlongtobeat data found.";
         }));
 
         StartCoroutine(DownloadPicture.Download(game.cover.GetURL(), (sprite) =>
