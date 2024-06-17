@@ -7,6 +7,7 @@ public class Search : MonoBehaviour
     public Transform searchResultsParent;
     private PageSpawner pageSpawner;
     private readonly List<GameObject> searchResults = new();
+    private Coroutine searchCoroutine;
 
     private void Start()
     {
@@ -17,10 +18,12 @@ public class Search : MonoBehaviour
     {
         if (string.IsNullOrEmpty(gameName)) return;
 
+        if (searchCoroutine != null) StopCoroutine(searchCoroutine);
+
         foreach (GameObject result in searchResults) Destroy(result);
         searchResults.Clear();
 
-        StartCoroutine(IGDBHandler.GetGamesFromName(gameName, (json) =>
+        searchCoroutine = StartCoroutine(IGDBHandler.GetGamesFromName(gameName, (json) =>
         {
             json = "{\"games\":" + json + "}";
             IGDB_Games games = JsonUtility.FromJson<IGDB_Games>(json);
@@ -33,5 +36,12 @@ public class Search : MonoBehaviour
             AutoGrid grid = searchResultsParent.GetComponent<AutoGrid>();
             grid.UpdateCellSize();
         }));
+    }
+
+    public void RemoveSearchResults()
+    {
+        if (searchCoroutine != null) StopCoroutine(searchCoroutine);
+        foreach (GameObject result in searchResults) Destroy(result);
+        searchResults.Clear();
     }
 }

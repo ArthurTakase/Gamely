@@ -69,10 +69,10 @@ public class CrackWatchHandler : MonoBehaviour
                 return crackgame;
 
         // Remove all games with levenstein distance > 3
-        for (int i = 0; i < allGames.Length; i++)
-            if (LevenshteinDistance.Compute(allGames[i].title, game.name) > 5)
-                allGames[i] = null;
-        allGames = allGames.Where(x => x != null).ToArray();
+        // for (int i = 0; i < allGames.Length; i++)
+        //     if (LevenshteinDistance.Compute(allGames[i].title, game.name) > 5)
+        //         allGames[i] = null;
+        // allGames = allGames.Where(x => x != null).ToArray();
 
         if (allGames.Length == 0) return null;
 

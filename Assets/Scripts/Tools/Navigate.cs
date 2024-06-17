@@ -9,6 +9,10 @@ public class Navigate : MonoBehaviour
 
     private GameObject currentPage;
 
+    public GameObject collectionPage;
+    public GameObject searchPage;
+    public GameObject calendarPage;
+
     void Start()
     {
         currentPage = defaultPage;
@@ -79,5 +83,20 @@ public class Navigate : MonoBehaviour
             .DOLocalMoveY(-height, 0.3f)
             .SetEase(Ease.InQuad)
             .OnComplete(() => popup.SetActive(false));
+    }
+
+    public void OpenCollection()
+    {
+        ShowPage(collectionPage);
+    }
+
+    public void OpenSearch()
+    {
+        ShowPage(searchPage);
+    }
+
+    public void OpenCalendar()
+    {
+        ShowPage(calendarPage);
     }
 }

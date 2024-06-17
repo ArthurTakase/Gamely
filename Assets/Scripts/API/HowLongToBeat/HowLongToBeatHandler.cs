@@ -17,7 +17,7 @@ public class HowLongToBeatHandler : MonoBehaviour
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
-        // request.SetRequestHeader("Referer", "https://howlongtobeat.com/");
+        request.SetRequestHeader("Referer", "https://howlongtobeat.com/");
 
         yield return request.SendWebRequest();
 

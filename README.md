@@ -98,8 +98,8 @@ L'objectif du projet est de remplacer l'application *Stash* par une alternative 
 
 ### Next version
 
-- Mettre la barre de recherche sur toutes les pages comme sur Showly
-- Transformer l'icone de la barre de navigation en bouton X pour vider la recherche quand le texte n'est pas vide
+<!-- - Mettre la barre de recherche sur toutes les pages comme sur Showly -->
+<!-- - Transformer l'icone de la barre de navigation en bouton X pour vider la recherche quand le texte n'est pas vide -->
 - Générer les pages des détails des jeux au clic
   - Jeux recommandés
   - Jeux de la même série
